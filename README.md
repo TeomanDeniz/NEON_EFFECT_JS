@@ -154,9 +154,5 @@ NEON_IMAGE();
 - Ensure that the `SVG` filter elements are present in the HTML body.
 
 ## License
-This project is open-source and available under the MIT License.
-
----
-
-Now, your `README.md` provides a clear explanation of how to use the project. Let me know if you need any modifications! 🚀
+This project is open-source and available under the GPL-3.0 License.
 
