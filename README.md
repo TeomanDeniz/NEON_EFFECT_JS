@@ -18,7 +18,7 @@ If your image is too dark to glow, then the script gets the average color of you
 Here's an example:
 
 <p align="center">
- <img src="https://raw.githubusercontent.com/TeomanDeniz/TeomanDeniz/refs/heads/main/images/repo_projects/NEON_EFFECT/PREVIEW2.png">
+ <img src="https://raw.githubusercontent.com/TeomanDeniz/TeomanDeniz/refs/heads/main/images/repo_projects/NEON_EFFECT/PREVIEW3.png">
 </p>
 
 If you don't want from function to make this process: You can add `data-force-blur` attribute on your div element:
