@@ -53,7 +53,7 @@ async function
 
 	for (const IMAGE_ELEMENT of IMAGE_ELEMENTS)
 	{
-		if (!IMAGE_ELEMENT.getAttribute("NEON_IMAGE"))
+		if (!IMAGE_ELEMENT.hasAttribute("DATA-NEON"))
 		{
 			const IMAGE = IMAGE_ELEMENT.querySelector("IMG");
 			const IMAGE_BLUR_SMALL = document.createElement("IMG");
@@ -65,7 +65,10 @@ async function
 			IMAGE_BLUR_SMALL.alt = "";
 			IMAGE_BLUR_BIG.alt = "";
 
-			if (IS_DARK(AVERAGE_COLOR.RGB))
+			if (
+				!IMAGE_ELEMENT.hasAttribute("DATA-FORCE-BLUR") &&
+				IS_DARK(AVERAGE_COLOR.RGB)
+			)
 			{
 				const BRIGHT_COLOR = BRIGHTEN_COLOR(AVERAGE_COLOR.RGB);
 				const BASE64_IMAGE = GENERATE_COLOR_IMAGE(
@@ -83,8 +86,8 @@ async function
 				IMAGE_BLUR_BIG.src = IMAGE.src;
 			}
 
-			IMAGE.classList.add("NEON_IMAGE");
-			IMAGE_ELEMENT.setAttribute("NEON", "1");
+			IMAGE.classList.add("NEON_IMG");
+			IMAGE_ELEMENT.setAttribute("DATA-NEON", undefined);
 			IMAGE_ELEMENT.appendChild(IMAGE_BLUR_SMALL);
 			IMAGE_ELEMENT.appendChild(IMAGE_BLUR_BIG);
 			IMAGE_ELEMENT.appendChild(IMAGE);
