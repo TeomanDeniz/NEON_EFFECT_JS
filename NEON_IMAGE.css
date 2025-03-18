@@ -1,0 +1,57 @@
+/******************************************************************************\
+# CSS - NEON_IMAGE                               #       Maximum Tension       #
+################################################################################
+#                                                #      -__            __-     #
+# Teoman Deniz                                   #  :    :!1!-_    _-!1!:    : #
+# maximum-tension.com                            #  ::                      :: #
+#                                                #  :!:    : :: : :  :  ::::!: #
+# +.....................++.....................+ #   :!:: :!:!1:!:!::1:::!!!:  #
+# : C - Maximum Tension :: Create - 2025/03/05 : #   ::!::!!1001010!:!11!!::   #
+# :---------------------::---------------------: #   :!1!!11000000000011!!:    #
+# : License - MIT       :: Update - 2025/03/05 : #    ::::!!!1!!1!!!1!!!::     #
+# +.....................++.....................+ #       ::::!::!:::!::::      #
+\******************************************************************************/
+
+.NEON
+{
+	POSITION: RELATIVE;
+	 DISPLAY: INLINE-BLOCK;
+}
+
+.NEON .NEON_BLUR_SMALL,
+.NEON .NEON_BLUR_BIG
+{
+	POSITION: ABSOLUTE;
+	 Z-INDEX: -1;
+}
+
+.NEON .NEON_BLUR_SMALL
+{
+	POINTER-EVENTS: NONE;
+	        HEIGHT: 110%;
+	         WIDTH: 110%;
+	          LEFT: -5%;
+	           TOP: -5%;
+
+	-WEBKIT-FILTER: URL(#NEON_BLUR_SMALL) SATURATE(5);
+	        FILTER: URL(#NEON_BLUR_SMALL) SATURATE(5);
+}
+
+.NEON .NEON_BLUR_BIG
+{
+	POINTER-EVENTS: NONE;
+	        HEIGHT: 200%;
+	         WIDTH: 200%;
+	          LEFT: -50%;
+	           TOP: -50%;
+
+	-WEBKIT-FILTER: URL(#NEON_BLUR_BIG);
+	        FILTER: URL(#NEON_BLUR_BIG);
+}
+
+.NEON .NEON_IMAGE
+{
+	POSITION: RELATIVE;
+	 DISPLAY: BLOCK;
+	  HEIGHT: AUTO;
+}
